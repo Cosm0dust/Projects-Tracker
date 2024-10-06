@@ -6,7 +6,8 @@ import { TaskModule } from './task/task.module';
 import { PomodoroSessionModule } from './pomodoro-session/pomodoro-session.module';
 import { PomodoroRoundModule } from './pomodoro-round/pomodoro-round.module';
 import { AuthModule } from './auth/auth.module';
-import dataSource from './data-source/data-source';  
+import dataSource from './data-source/data-source';
+import { TimeBlockModule } from './time-block/time-block.module';
 
 @Module({
   imports: [
@@ -25,6 +26,7 @@ import dataSource from './data-source/data-source';
     PomodoroSessionModule,
     PomodoroRoundModule,
     AuthModule,
+    TimeBlockModule
   ],
 })
 export class AppModule {}

@@ -1,12 +1,12 @@
 import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
 import { Task } from '../task/task.entity';
 import { PomodoroSession } from '../pomodoro-session/pomodoro-session.entity';
-import { TimeBlock } from '../time-block/time_block.entity';
 import { BasicColumns } from '../common/entityFragments/baseEntity.entity';
+import { TimeBlock } from '../time-block/time-block.entity';
 
 @Entity('user')
 export class User extends BasicColumns {
-  @Column({nullable: true})
+  @Column({nullable: true, default: ''})
   username?: string;
 
   @Column()
