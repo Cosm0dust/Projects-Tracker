@@ -2,7 +2,7 @@ import { Body, Controller, Get, HttpCode, Put, UsePipes, ValidationPipe } from '
 import { Auth } from '../auth/decorators/auth.decorator';
 import { CurrentUser } from '../auth/decorators/user.decorator';
 import { UserService } from './user.service';
-import { UserDto } from './user.dto';
+import { UserDto } from './dtos/user.dto';
 
 @Controller('user')
 export class UserController {

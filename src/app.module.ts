@@ -8,6 +8,7 @@ import { PomodoroRoundModule } from './pomodoro-round/pomodoro-round.module';
 import { AuthModule } from './auth/auth.module';
 import dataSource from './data-source/data-source';
 import { TimeBlockModule } from './time-block/time-block.module';
+import { TimerModule } from './timer/timer.module';
 
 @Module({
   imports: [
@@ -26,7 +27,8 @@ import { TimeBlockModule } from './time-block/time-block.module';
     PomodoroSessionModule,
     PomodoroRoundModule,
     AuthModule,
-    TimeBlockModule
+    TimeBlockModule,
+    TimerModule
   ],
 })
 export class AppModule {}

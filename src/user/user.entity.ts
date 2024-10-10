@@ -1,6 +1,6 @@
 import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
 import { Task } from '../task/task.entity';
-import { PomodoroSession } from '../pomodoro-session/pomodoro-session.entity';
+import { TimerSession } from '../timer/timer-session.entity';
 import { BasicColumns } from '../common/entityFragments/baseEntity.entity';
 import { TimeBlock } from '../time-block/time-block.entity';
 
@@ -30,7 +30,7 @@ export class User extends BasicColumns {
   @OneToMany(() => TimeBlock, (timeBlock) => timeBlock.user)
   timeBlocks: TimeBlock[];
 
-  @OneToMany(() => PomodoroSession, (pomodoroSession) => pomodoroSession.user)
-  pomodoroSessions: PomodoroSession[];
+  @OneToMany(() => TimerSession, (timerSession) => timerSession.user)
+  timerSessions: TimerSession[];
 
 }

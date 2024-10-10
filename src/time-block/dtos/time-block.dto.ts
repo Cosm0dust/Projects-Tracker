@@ -9,7 +9,7 @@ export class TimeBlockDto {
   color?: string;
 
   @IsNumber()
-  duration: string;
+  duration: number;  // Changed from string to number
 
   @IsNumber()
   @IsOptional()

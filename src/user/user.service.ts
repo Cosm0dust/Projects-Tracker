@@ -4,8 +4,8 @@ import { Repository } from 'typeorm';
 import { User } from './user.entity'; 
 import { AuthDto } from '../auth/dto/auth.dto';
 import { hash } from 'argon2';
-import { UserDto } from './user.dto';
 import { TaskService } from '../task/task.service';
+import { UserDto } from './dtos/user.dto';
 
 @Injectable()
 export class UserService {
@@ -77,6 +77,14 @@ export class UserService {
             user,
             statistics
         }
+    }
+
+    async getUserIntervalCounts(id: string) {
+        return await this.userRepository.findOne({
+            where: { id },
+            select: ['intervalsCount']
+        });
+
     }
 }
 

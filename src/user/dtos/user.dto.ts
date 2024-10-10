@@ -1,9 +1,9 @@
 import { IsNumber, IsOptional, Max, Min } from "class-validator";
-import { User } from "./user.entity";
 import { OmitType, PartialType } from '@nestjs/mapped-types';
 import { PrimaryGeneratedColumn } from "typeorm";
+import { User } from "../user.entity";
 
-export class PomodoroSettingsDto {
+export class TimerSettingsDto {
     @IsOptional()
     @IsNumber()
     @Min(1)
@@ -22,7 +22,7 @@ export class PomodoroSettingsDto {
 }
 
 
-export class UserDto extends PartialType(User) implements PomodoroSettingsDto {
+export class UserDto extends PartialType(User) implements TimerSettingsDto {
 
 }
    
